@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Rounded handwritten font -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+
+            <div class="giraffe">
+                🦒
+            </div>
+
+            <div class="title-box">
+                <h1>ABOUT ME</h1>
+            </div>
+
+        </div>
+
+        <!-- Cards -->
+        <div class="cards">
+
+            <div class="card" onclick="openModal('favoritesModal')">
+                <h2>my<br>favorites</h2>
+            </div>
+
+            <div class="card" onclick="openModal('nameModal')">
+                <h2>my full<br>name</h2>
+            </div>
+
+            <div class="card" onclick="openModal('hobbiesModal')">
+                <h2>my<br>hobbies</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Favorites Modal -->
+    <div class="modal" id="favoritesModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal('favoritesModal')">&times;</span>
+
+            <h2>my favorites</h2>
+
+            <div class="content-text">
+                color – pink, green and blue<br>
+                food – fries, hash brown, veggies<br>
+                animal – dogs, rabbit, hamster and cat<br>
+                song – about you by 1975, loml by taylor swift
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Full Name Modal -->
+    <div class="modal" id="nameModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal('nameModal')">&times;</span>
+
+            <h2>my full name</h2>
+
+            <div class="big-name">
+                ELIANA D. TONIC
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Hobbies Modal -->
+    <div class="modal" id="hobbiesModal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal('hobbiesModal')">&times;</span>
+
+            <h2>my hobbies</h2>
+
+            <div class="content-text hobby-text">
+                editing, listening to music,<br>
+                sleeping, playing online<br>
+                games
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function openModal(id){
+            document.getElementById(id).style.display = "flex";
+        }
+
+        function closeModal(id){
+            document.getElementById(id).style.display = "none";
+        }
+
+        window.onclick = function(event){
+
+            const modals = document.querySelectorAll(".modal");
+
+            modals.forEach(modal => {
+
+                if(event.target === modal){
+                    modal.style.display = "none";
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #f8bfd1,
+        #d7c1cb,
+        #aac69f,
+        #f7b6d1
+    );
+
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 35px 50px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.giraffe{
+    font-size: 140px;
+    flex-shrink: 0;
+}
+
+.giraffe img{
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.title-box{
+    flex: 1;
+    background: white;
+    border-radius: 30px;
+    min-height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.title-box h1{
+    font-family: 'Baloo 2', cursive;
+    font-size: 95px;
+    color: #d59acb;
+    text-align: center;
+
+    text-shadow:
+        6px 6px 0 #b9d8ac;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+    margin-top: 30px;
+
+    display: flex;
+    gap: 30px;
+}
+
+.card{
+    flex: 1;
+
+    background: #bdd7af;
+    border-radius: 30px;
+
+    height: 330px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: transform .3s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card h2{
+    font-family: 'Baloo 2', cursive;
+    color: white;
+
+    font-size: 70px;
+    line-height: .9;
+    text-align: center;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,.25);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 999;
+}
+
+.modal-content{
+    width: 100%;
+    max-width: 1050px;
+
+    background: #bdd7af;
+    border-radius: 35px;
+
+    padding: 50px;
+
+    position: relative;
+
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.modal-content h2{
+    font-family: 'Baloo 2', cursive;
+    color: white;
+
+    font-size: 75px;
+
+    margin-bottom: 25px;
+}
+
+.content-text{
+    font-size: 38px;
+    line-height: 1.6;
+    color: black;
+}
+
+.big-name{
+    margin-top: 80px;
+
+    text-align: center;
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.hobby-text{
+    font-size: 60px;
+    line-height: 1.4;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px){
+
+    .container{
+        padding: 25px;
+    }
+
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .giraffe img{
+        width: 160px;
+    }
+
+    .title-box{
+        width: 100%;
+        min-height: 150px;
+    }
+
+    .title-box h1{
+        font-size: 65px;
+    }
+
+    .cards{
+        gap: 20px;
+    }
+
+    .card{
+        height: 250px;
+    }
+
+    .card h2{
+        font-size: 50px;
+    }
+
+    .modal-content{
+        padding: 40px;
+    }
+
+    .modal-content h2{
+        font-size: 55px;
+    }
+
+    .content-text{
+        font-size: 30px;
+    }
+
+    .big-name{
+        font-size: 50px;
+        margin-top: 60px;
+    }
+
+    .hobby-text{
+        font-size: 42px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+    .container{
+        padding: 20px;
+    }
+
+    .header{
+        gap: 15px;
+    }
+
+    .giraffe{
+        font-size: 90px;
+    }
+
+    .giraffe img{
+        width: 120px;
+    }
+
+    .title-box{
+        min-height: 120px;
+        border-radius: 20px;
+    }
+
+    .title-box h1{
+        font-size: 42px;
+        text-shadow:
+            4px 4px 0 #b9d8ac;
+    }
+
+    .cards{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card{
+        width: 100%;
+        height: 170px;
+    }
+
+    .card h2{
+        font-size: 42px;
+    }
+
+    .modal{
+        padding: 10px;
+    }
+
+    .modal-content{
+        padding: 25px;
+        border-radius: 25px;
+    }
+
+    .modal-content h2{
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .close{
+        font-size: 32px;
+        top: 10px;
+        right: 15px;
+    }
+
+    .content-text{
+        font-size: 22px;
+        line-height: 1.7;
+    }
+
+    .big-name{
+        font-size: 34px;
+        margin-top: 40px;
+        word-break: break-word;
+    }
+
+    .hobby-text{
+        font-size: 28px;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 480px){
+
+    .title-box h1{
+        font-size: 34px;
+    }
+
+    .card{
+        height: 150px;
+    }
+
+    .card h2{
+        font-size: 36px;
+    }
+
+    .modal-content h2{
+        font-size: 34px;
+    }
+
+    .content-text{
+        font-size: 18px;
+    }
+
+    .big-name{
+        font-size: 28px;
+    }
+
+    .hobby-text{
+        font-size: 22px;
+    }
+}
